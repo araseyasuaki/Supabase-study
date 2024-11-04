@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import TodoApp from '@/components/TodoApp';
 
-const page = () => {
+const Page: React.FC = () => {
   return (
-    <div>page</div>
-  )
+    <div>
+      <TodoApp />
+    </div>
+  );
 }
 
-export default page
+export default Page;
