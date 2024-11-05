@@ -16,12 +16,10 @@ const TodoApp: React.FC = () => {
   useEffect(() => {
     const getTodos = async () => {
       const todos = await getAllTodos();
-      setTodos(todos);
-      console.log(todos);
+      setTodos(todos || []); // todosがnullの場合は空の配列をセット
     };
     getTodos();
   }, []);
-
 
   return (
     <section className='text-center mb-2 text-2xl font-medium'>
