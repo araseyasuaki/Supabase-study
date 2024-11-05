@@ -12,7 +12,7 @@ const TodoApp: React.FC = () => {
     const getTodos = async () => {
       const todos = await getAllTodos();
       setTodos(todos);
-      console.log(todos);
+      // console.log(todos);
     }
     getTodos();
   },[]);
