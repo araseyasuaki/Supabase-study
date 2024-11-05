@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoApp from '../components/todoApp';
+import TodoApp from '@/components/todoApp';
 
 const Page: React.FC = () => {
   return (
