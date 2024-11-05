@@ -3,7 +3,7 @@ import TodoApp from '@/components/TodoApp';
 
 const Page: React.FC = () => {
   return (
-    <div>
+    <div className='flex items-center justify-center h-screen'>
       <TodoApp />
     </div>
   );
