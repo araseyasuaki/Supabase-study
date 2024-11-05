@@ -16,7 +16,7 @@ const TodoApp: React.FC = () => {
   useEffect(() => {
     const getTodos = async () => {
       const todos = await getAllTodos();
-      setTodos(todos || []); // todosがnullの場合は空の配列をセット
+      setTodos(todos || []);
     };
     getTodos();
   }, []);
@@ -29,6 +29,13 @@ const TodoApp: React.FC = () => {
         <button className='shadow-md border-2 px-1 py-1 rounded-lg bg-green-200'>Add</button>
       </form>
       <TodoList/>
+      <div>
+        {todos.map((todo) => (
+          <div key={todo.id} className='p-2 border-b'>
+            {todo.title} {/* Todoのタイトルを表示 */}
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
