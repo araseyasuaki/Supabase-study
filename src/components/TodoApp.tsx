@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 // import { getAllTodos } from '../utils/supabaseFunctions'
-// import TodoList from './TodoList';
+// import TodoList from './todoList';
 
 const TodoApp: React.FC = () => {
 
