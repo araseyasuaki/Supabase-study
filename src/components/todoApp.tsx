@@ -4,16 +4,25 @@ import React, { useEffect, useState } from 'react';
 import { getAllTodos } from '../utils//supabaseFunctions'
 import TodoList from './todoList';
 
+interface Todo {
+  id: number;
+  title: string;
+}
+
 const TodoApp: React.FC = () => {
-  const [todos, setTodos] = useState<any>([]);
+
+  const [todos, setTodos] = useState<Todo[]>([]);
+
   useEffect(() => {
     const getTodos = async () => {
       const todos = await getAllTodos();
       setTodos(todos);
       console.log(todos);
-    }
+    };
     getTodos();
-  },[]);
+  }, []);
+
+
   return (
     <section className='text-center mb-2 text-2xl font-medium'>
       <h3 className=''>Supabese Todo App</h3>
