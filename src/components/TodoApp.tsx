@@ -34,7 +34,7 @@
 
 
 
-const TodoApp: React.FC = () => {
+const todoApp: React.FC = () => {
 
   return (
     <section className='text-center mb-2 text-2xl font-medium'>
@@ -47,4 +47,4 @@ const TodoApp: React.FC = () => {
   );
 }
 
-export default TodoApp;
+export default todoApp;
