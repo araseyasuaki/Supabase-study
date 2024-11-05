@@ -10,7 +10,7 @@ const TodoApp: React.FC = () => {
     const getTodos = async () => {
       const todos = await getAllTodos();
       setTodos(todos);
-      // console.log(todos);
+      console.log(todos);
     }
     getTodos();
   },[]);
@@ -21,7 +21,7 @@ const TodoApp: React.FC = () => {
         <input type="text" className='shadow-lg p-1 outline-none'/>
         <button className='shadow-md border-2 px-1 py-1 rounded-lg bg-green-200'>Add</button>
       </form>
-      {/* <TodoList/> */}
+      <TodoList/>
     </section>
   );
 }
