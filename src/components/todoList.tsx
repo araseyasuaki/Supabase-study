@@ -1,9 +1,11 @@
 import React from 'react'
-import { Todo } from '@/utils/interface';
 
 
 type Props = {
-  todos: Todo[];
+  todos: {
+    id: number;
+    title: string;
+  }[];
 }
 
 const TodoList = (props: Props) => {
