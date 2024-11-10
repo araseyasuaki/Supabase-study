@@ -4,7 +4,7 @@ import { deleteTodo, getAllTodos } from '../utils/supabaseFunctions'
 interface Props {
   todos: {
     id: number;
-    title: React.Dispatch<any>;
+    title: string;
   }[];
   setTodos: any;
 }
