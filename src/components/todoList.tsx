@@ -22,6 +22,7 @@ const TodoList = (props: Props) => {
   return (
     <div>
       <ul className='mx-auto'>
+        <h3>Todoリスト</h3>
         {todos.map((todo) => (
           <div key={todo.id} className='flex bg-orange-200 rounded-md mt-2 mb-2 p-2 justify-between'>
             <li className='font-medium'>{todo.title}</li>
