@@ -41,7 +41,7 @@ const TodoApp: React.FC = () => {
         <input type="text" className='shadow-lg p-1 outline-none' onChange={(e) => setTitle(e.target.value)} value={title}/>
         <button className='shadow-md border-2 px-1 py-1 rounded-lg bg-green-200'>Add</button>
       </form>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} setTodos={setTodos}/>
     </section>
   );
 }
