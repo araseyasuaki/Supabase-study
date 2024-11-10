@@ -1,24 +1,31 @@
 import React from 'react';
-
-interface Todo {
-
-}
+import { deleteTodo, getAllTodos } from '../utils/supabaseFunctions'
 
 interface Props {
   todos: {
     id: number;
-    title: string;
+    title: React.Dispatch<any>;
   }[];
+  setTodos: any;
 }
 
-const TodoList: React.FC<Props> = ({ todos }) => {
+const TodoList = (props: Props) => {
+
+  const { todos, setTodos } = props;
+
+  const handleDelete = async (id: number) => {
+    await deleteTodo(id);
+    let todos = await getAllTodos();
+    setTodos(todos);
+  };
+
   return (
     <div>
       <ul className='mx-auto'>
         {todos.map((todo) => (
           <div key={todo.id} className='flex bg-orange-200 rounded-md mt-2 mb-2 p-2 justify-between'>
             <li className='font-medium'>{todo.title}</li>
-            <span className='cursor-pointer'>X</span>
+            <span className="cursor-pointer" onClick={() => handleDelete(todo.id)}>✖</span>
           </div>
         ))}
       </ul>
